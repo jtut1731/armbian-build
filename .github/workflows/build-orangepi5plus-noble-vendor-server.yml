@@ -5,7 +5,7 @@ jobs:
   build-armbian:
     runs-on: ubuntu-latest
     steps:
-      - uses: armbian/build@main
+      - uses: jtut1731/armbian-build@main
         with:
           armbian_token:          "${{ secrets.GH_CONTAINER_REGISTRY_PUBLISH_PAT }}"  # GitHub token
           armbian_release:        "noble"                        # userspace
