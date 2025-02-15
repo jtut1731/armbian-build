@@ -5,7 +5,7 @@ jobs:
   build-armbian:
     runs-on: ubuntu-latest
     steps:
-      - uses: jtut1731/armbian-build@main
+      - uses: armbian/build@13e10e1
         with:
           armbian_token:          "${{ secrets.GH_CONTAINER_REGISTRY_PUBLISH_PAT }}"  # GitHub token
           armbian_release:        "noble"                        # userspace
@@ -13,3 +13,4 @@ jobs:
           armbian_board:          "orangepi5-plus"                   # build target
           armbian_kernel_branch:  "vendor"
           armbian_ui:             "server"
+          armbian_artifacts:      "mesa-vpu"
